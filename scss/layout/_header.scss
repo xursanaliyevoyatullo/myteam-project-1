@@ -1,0 +1,154 @@
+.header {
+    background-color: $midnight-green;
+}
+
+.header__top {
+    padding-top: 7.3rem;
+    padding-bottom: 7.3rem;
+}
+
+.header__top__container {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    margin-right: 8rem;
+}
+
+.sitenav {
+    margin-right: auto;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    a {
+        color: $white-color;
+        font-weight: 600;
+        transition: 0.3s;
+
+        &:hover {
+            color: $light-coral;
+        }
+    }
+
+}
+
+.header__nav__toggler {
+    display: none;
+}
+
+
+.header__bottom {
+    padding-top: 5.6rem;
+    padding-bottom: 25rem;
+}
+
+.header__bottom__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__bottom__title__wrapper {
+    width: 100%;
+    max-width: 600px;
+}
+
+.header__bottom__title {
+    font-size: $h1-fs-lg;
+    line-height: $h1-lh-lg;
+}
+
+
+.header__bottom__content {
+    width: 100%;
+    max-width: 445px;
+}
+
+.site-divider {
+    width: 50px;
+    height: 3px;
+    background-color: $rapture-blue;
+    border: 0;
+    margin-bottom: 7.9rem;
+}
+
+.header__bottom__descriptiption {
+    font-family: $main-font;
+    font-weight: 600;
+    font-size: $h3-fs;
+    line-height: $h3-lh;
+}
+
+
+@media screen and (max-width:768px) {
+    .header__top {
+        padding-top: 6.4rem;
+        padding-bottom: 6.4rem;
+    }
+
+    .site-logo {
+        margin-right: 4.8rem;
+
+        img {
+            width: 128px;
+            height: 32px;
+        }
+    }
+}
+
+@media screen and (max-width:635px) {
+    .header__top {
+        padding-top: 4.8rem;
+        padding-bottom: 4.8rem;
+    }
+
+    .site-logo {
+        display: block;
+        margin-right: auto;
+    }
+
+    .sitenav {
+        display: none;
+    }
+
+    .header__link {
+        display: none;
+    }
+
+    .header__nav__toggler {
+        background-color: transparent;
+        border: none;
+        display: block;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .header__bottom__container {
+        font-family: $main-font;
+        font-weight: 700;
+        flex-direction: column;
+    }
+
+    .header__bottom__title {
+        text-align: center;
+        font-size: 4rem;
+        line-height: 1;
+        padding: 0 2.4rem 1.8rem 2.4rem;
+    }
+
+    .header__bottom__divider {
+        display: none;
+    }
+
+    .header__bottom__descriptiption {
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: $body-lh-lg;
+        text-align: center;
+    }
+}

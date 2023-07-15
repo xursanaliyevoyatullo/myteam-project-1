@@ -37,13 +37,38 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    font-family: $main-font;
+    font-size: $body-fs-sm;
+    line-height: $body-lh-sm;
+    color:$white-color;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px; // *
+    max-width: 1210px; // *
     margin-left: auto;
     margin-right: auto;
     padding-left: 5rem; // *
     padding-right: 5rem;// *
 }
+
+.light-text {
+    color:$light-coral;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        padding-left: 3.9rem;
+        padding-right: 3.9rem;
+    }
+}
+@media screen and (max-width:635px) {
+    .container {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+}
+
+
+
+

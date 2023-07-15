@@ -1,3 +1,270 @@
 main {
     flex-grow: 1;
 }
+
+.main__top {
+    padding-top: 10rem;
+    padding-bottom: 14rem;
+    background: $sacramento-state-green;
+}
+
+.main__top__container {
+    display: flex;
+    align-items: center;
+}
+
+.main__top__wrapper {
+    width: 445px;
+}
+
+.main__top__divider {
+    background-color: $light-coral;
+}
+
+.main__top__title {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: $h2-fs;
+    line-height: $h2-lh;
+}
+
+
+
+
+.main__top__bottom {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    margin-top: 27rem;
+    margin-left: 12.5rem;
+}
+
+.main__top__bottom__cards {
+    display: flex;
+    gap: 2.3rem;
+    font-family: $main-font;
+
+    img {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+.main__top__bottom__cards__wrapper {
+
+    h1 {
+        font-size: $body-fs-lg;
+        line-height: $body-lh-lg;
+        margin-bottom: 1.6rem;
+        color: $light-coral;
+    }
+
+    h2 {
+        font-weight: 600;
+        opacity: 80%;
+        font-size: $body-fs-sm;
+        line-height: $body-lh-sm;
+    }
+}
+
+
+
+
+@media screen and (max-width:375px) {
+
+    .main__top__container  {
+        font-family: $main-font;
+        font-weight: 700;
+        display: block;
+    }
+
+    .main__top__wrapper {
+        width: 240px;
+        font-family: $main-font;
+    }
+
+    .main__top__title {
+        font-family: $main-font;
+        font-size: 3.2rem;
+        line-height: 1;
+    }
+
+    .main__top__bottom {
+        display: flex;
+        gap: 4.8rem;
+        margin-top: 5.6rem;
+        width: 327px;
+        margin-left: auto;
+    }
+
+    .main__top__bottom__cards {
+        display: flex;
+        flex-direction: column;
+        font-family: $main-font;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main__top__bottom__cards__wrapper {
+        text-align: center;
+    }
+}
+
+
+
+.section__hero {
+    background-color: $deep-jungle-green;
+}
+
+.section__hero__top {
+    padding-top: 10rem;
+    padding-bottom: 14rem;
+}
+
+.section__hero__text {
+    width: 932px;
+    font-family: $main-font;
+    font-size: $h2-fs;
+    line-height: $h2-lh;
+    text-align: center;
+    margin-left: 9rem;
+    .blue__text {
+        color: $rapture-blue;
+    }
+}
+
+
+
+.section__hero__container__cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__hero__cards__pages {
+    font-family: $main-font;
+    .section__hero__cards__img {
+        margin-left: 14.2rem;
+    }
+    h2 {
+        width: 350px;
+        font-weight: 600;
+        font-size: $body-fs-sm;
+        line-height: $body-lh-sm;
+        margin-top: -2rem;
+        text-align: center;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.section__hero__cards__names {
+    width: 350px;
+    h1 {
+        color: $rapture-blue;
+        font-size: $body-fs-sm;
+        line-height: $body-lh-sm;
+        text-align: center;
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 3.2rem;
+    }
+
+}
+
+.section__hero__bottom__img {
+    margin-left: 14rem;
+    margin-bottom: 14rem;
+}
+
+
+
+@media screen and (max-width:375px) {
+    .section__hero {
+        background-color: $deep-jungle-green;
+        padding-bottom: 16rem;
+    }
+    
+    .section__hero__top {
+        padding-top: 10rem;
+        padding-bottom: 16.4rem;
+    }
+
+    .section__hero__container {
+        display: block;
+        font-family: $main-font;
+    }
+    
+    .section__hero__text {
+        width: 327px;
+        font-family: $main-font;
+        margin: 0;
+        font-size: 3.2rem;
+        line-height: 1;
+        .blue__text {
+            color: $rapture-blue;
+        }
+    }
+
+    .section__hero__container__cards  {
+        font-family: $main-font;
+        display: block;
+    }
+
+    .section__hero__cards__pages {
+        font-family: $main-font;
+        margin-top: 4.8rem;
+        margin-left: -1.5rem;
+    }
+
+    .section__hero__bottom__img  {
+        margin-top: -1.5rem;
+    }
+}
+
+
+
+.section__bottom__header {
+    padding-top: 7.6rem;
+    padding-bottom: 7.6rem;
+    background-color: $light-coral;
+}
+
+.section__bottom__container {
+    width: 995px;
+    font-family: $main-font;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+        text-align: center;
+        font-size: $h2-fs;
+        line-height: $h2-lh;
+        color: $sacramento-state-green;   
+    }
+
+}
+
+
+@media screen and (max-width:375px) {
+    .section__bottom__header {
+        padding-top: 8.3rem;
+        padding-bottom: 8.3rem;
+        font-family: $main-font;
+    }
+
+    .section__bottom__container {
+        width: 327px;
+        display: block;
+        h1 {
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 1;
+            padding-bottom: 2.4rem;
+        }
+    }
+}

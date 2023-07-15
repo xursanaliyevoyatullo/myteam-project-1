@@ -306,4 +306,661 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover; /* contain */
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Livvic", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #FFFFFF;
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.light-text {
+  color: #F67E7E;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+  }
+}
+@media screen and (max-width: 635px) {
+  .container {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}
+/* livvic-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/livvic-v14-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* livvic-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Livvic";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/livvic-v14-latin-500italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* livvic-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/livvic-v14-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* livvic-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/livvic-v14-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* livvic-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Livvic";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/livvic-v14-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.btn {
+  border-radius: 2.4rem;
+  border: 2px solid transparent;
+  line-height: 1.56;
+  padding-top: 0.9rem;
+  padding-right: 3.3rem;
+  padding-bottom: 1.1rem;
+  padding-left: 3.2rem;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.light-btn {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.light-btn:hover {
+  background-color: #FFFFFF;
+  color: #002529;
+}
+
+.dark-btn {
+  border-color: #012F34;
+  color: #012F34;
+}
+.dark-btn:hover {
+  background-color: #012F34;
+  color: #FFFFFF;
+}
+
+.section__link__btn {
+  border-radius: 2.4rem;
+  border: 2px solid;
+  line-height: 1.56;
+  padding-top: 0.9rem;
+  padding-right: 3.3rem;
+  padding-bottom: 1.1rem;
+  padding-left: 3.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.section-btn {
+  border-color: #012F34;
+  color: #012F34;
+}
+
+@media screen and (max-width: 375px) {
+  .section__link__btn {
+    margin-left: 6rem;
+  }
+}
+.header {
+  background-color: #014E56;
+}
+
+.header__top {
+  padding-top: 7.3rem;
+  padding-bottom: 7.3rem;
+}
+
+.header__top__container {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  margin-right: 8rem;
+}
+
+.sitenav {
+  margin-right: auto;
+}
+.sitenav ul {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.sitenav a {
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.sitenav a:hover {
+  color: #F67E7E;
+}
+
+.header__nav__toggler {
+  display: none;
+}
+
+.header__bottom {
+  padding-top: 5.6rem;
+  padding-bottom: 25rem;
+}
+
+.header__bottom__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__bottom__title__wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+.header__bottom__title {
+  font-size: 10rem;
+  line-height: 1;
+}
+
+.header__bottom__content {
+  width: 100%;
+  max-width: 445px;
+}
+
+.site-divider {
+  width: 50px;
+  height: 3px;
+  background-color: #79C8C7;
+  border: 0;
+  margin-bottom: 7.9rem;
+}
+
+.header__bottom__descriptiption {
+  font-family: "Livvic", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .header__top {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+  .site-logo {
+    margin-right: 4.8rem;
+  }
+  .site-logo img {
+    width: 128px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 635px) {
+  .header__top {
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+  .site-logo {
+    display: block;
+    margin-right: auto;
+  }
+  .sitenav {
+    display: none;
+  }
+  .header__link {
+    display: none;
+  }
+  .header__nav__toggler {
+    background-color: transparent;
+    border: none;
+    display: block;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header__bottom__container {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    flex-direction: column;
+  }
+  .header__bottom__title {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1;
+    padding: 0 2.4rem 1.8rem 2.4rem;
+  }
+  .header__bottom__divider {
+    display: none;
+  }
+  .header__bottom__descriptiption {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+.footer {
+  background-color: #002529;
+}
+
+.footer__top {
+  padding-top: 4.8rem;
+  padding-bottom: 7.6rem;
+}
+
+.footer__top__container {
+  display: flex;
+}
+
+.footer-logo {
+  margin-bottom: 2.5rem;
+}
+
+.footer__nav ul {
+  display: flex;
+  gap: 4rem;
+}
+.footer__nav a {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.footer__nav a:hover {
+  color: #F67E7E;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__top {
+    width: 327px;
+    padding-top: 6.6rem;
+    padding-bottom: 6.4rem;
+  }
+  .footer-logo {
+    width: 96px;
+    margin-bottom: 2.4rem;
+    margin-left: 8.3rem;
+  }
+  .footer__nav ul {
+    width: 107px;
+    display: flex;
+    font-family: "Livvic", sans-serif;
+    margin-left: 10rem;
+  }
+  .footer__nav a {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-bottom: 2.4rem;
+  }
+  .footer__nav a:hover {
+    color: #F67E7E;
+  }
+}
+.footer__top__texts {
+  font-family: "Livvic", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-left: 13rem;
+  color: #b6aeae;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__top__container {
+    display: block;
+  }
+  .footer__top__texts {
+    width: 327px;
+    height: 100px;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+    opacity: 60%;
+    margin-bottom: 4rem;
+  }
+}
+.footer__top__right {
+  font-family: "Livvic", sans-serif;
+  font-weight: 600;
+  margin-left: 40rem;
+}
+
+.footer__top__icons {
+  display: flex;
+  gap: 1.6rem;
+  margin-left: 14.5rem;
+  margin-bottom: 5rem;
+}
+
+.footer__top__bottom__text {
+  width: 255px;
+  opacity: 60%;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__top__container {
+    display: block;
+    flex-direction: column;
+  }
+  .footer__top__right {
+    width: 327px;
+    margin: 0;
+  }
+  .footer__top__icons {
+    display: flex;
+    margin-left: 10.2rem;
+    gap: 2.6rem;
+    margin-bottom: 1.6rem;
+  }
+  .footer__top__bottom__text {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 6.4rem;
+    margin-left: 3.6rem;
+  }
+}
+main {
+  flex-grow: 1;
+}
+
+.main__top {
+  padding-top: 10rem;
+  padding-bottom: 14rem;
+  background: #012F34;
+}
+
+.main__top__container {
+  display: flex;
+  align-items: center;
+}
+
+.main__top__wrapper {
+  width: 445px;
+}
+
+.main__top__divider {
+  background-color: #F67E7E;
+}
+
+.main__top__title {
+  font-family: "Livvic", sans-serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 1;
+}
+
+.main__top__bottom {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-top: 27rem;
+  margin-left: 12.5rem;
+}
+
+.main__top__bottom__cards {
+  display: flex;
+  gap: 2.3rem;
+  font-family: "Livvic", sans-serif;
+}
+.main__top__bottom__cards img {
+  width: 72px;
+  height: 72px;
+}
+
+.main__top__bottom__cards__wrapper h1 {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  color: #F67E7E;
+}
+.main__top__bottom__cards__wrapper h2 {
+  font-weight: 600;
+  opacity: 80%;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 375px) {
+  .main__top__container {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    display: block;
+  }
+  .main__top__wrapper {
+    width: 240px;
+    font-family: "Livvic", sans-serif;
+  }
+  .main__top__title {
+    font-family: "Livvic", sans-serif;
+    font-size: 3.2rem;
+    line-height: 1;
+  }
+  .main__top__bottom {
+    display: flex;
+    gap: 4.8rem;
+    margin-top: 5.6rem;
+    width: 327px;
+    margin-left: auto;
+  }
+  .main__top__bottom__cards {
+    display: flex;
+    flex-direction: column;
+    font-family: "Livvic", sans-serif;
+    align-items: center;
+    justify-content: center;
+  }
+  .main__top__bottom__cards__wrapper {
+    text-align: center;
+  }
+}
+.section__hero {
+  background-color: #004047;
+}
+
+.section__hero__top {
+  padding-top: 10rem;
+  padding-bottom: 14rem;
+}
+
+.section__hero__text {
+  width: 932px;
+  font-family: "Livvic", sans-serif;
+  font-size: 4.8rem;
+  line-height: 1;
+  text-align: center;
+  margin-left: 9rem;
+}
+.section__hero__text .blue__text {
+  color: #79C8C7;
+}
+
+.section__hero__container__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section__hero__cards__pages {
+  font-family: "Livvic", sans-serif;
+}
+.section__hero__cards__pages .section__hero__cards__img {
+  margin-left: 14.2rem;
+}
+.section__hero__cards__pages h2 {
+  width: 350px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-top: -2rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.section__hero__cards__names {
+  width: 350px;
+}
+.section__hero__cards__names h1 {
+  color: #79C8C7;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  text-align: center;
+}
+.section__hero__cards__names h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.section__hero__bottom__img {
+  margin-left: 14rem;
+  margin-bottom: 14rem;
+}
+
+@media screen and (max-width: 375px) {
+  .section__hero {
+    background-color: #004047;
+    padding-bottom: 16rem;
+  }
+  .section__hero__top {
+    padding-top: 10rem;
+    padding-bottom: 16.4rem;
+  }
+  .section__hero__container {
+    display: block;
+    font-family: "Livvic", sans-serif;
+  }
+  .section__hero__text {
+    width: 327px;
+    font-family: "Livvic", sans-serif;
+    margin: 0;
+    font-size: 3.2rem;
+    line-height: 1;
+  }
+  .section__hero__text .blue__text {
+    color: #79C8C7;
+  }
+  .section__hero__container__cards {
+    font-family: "Livvic", sans-serif;
+    display: block;
+  }
+  .section__hero__cards__pages {
+    font-family: "Livvic", sans-serif;
+    margin-top: 4.8rem;
+    margin-left: -1.5rem;
+  }
+  .section__hero__bottom__img {
+    margin-top: -1.5rem;
+  }
+}
+.section__bottom__header {
+  padding-top: 7.6rem;
+  padding-bottom: 7.6rem;
+  background-color: #F67E7E;
+}
+
+.section__bottom__container {
+  width: 995px;
+  font-family: "Livvic", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section__bottom__container h1 {
+  text-align: center;
+  font-size: 4.8rem;
+  line-height: 1;
+  color: #012F34;
+}
+
+@media screen and (max-width: 375px) {
+  .section__bottom__header {
+    padding-top: 8.3rem;
+    padding-bottom: 8.3rem;
+    font-family: "Livvic", sans-serif;
+  }
+  .section__bottom__container {
+    width: 327px;
+    display: block;
+  }
+  .section__bottom__container h1 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1;
+    padding-bottom: 2.4rem;
+  }
 }/*# sourceMappingURL=style.css.map */

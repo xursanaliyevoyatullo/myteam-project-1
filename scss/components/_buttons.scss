@@ -1,0 +1,59 @@
+.btn {
+    border-radius: 2.4rem;
+    border: 2px solid transparent;
+    line-height: 1.56;
+    padding: {
+        top:0.9rem;
+        right:3.3rem;
+        bottom: 1.1rem;
+        left: 3.2rem;
+    };
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.light-btn {
+    border-color: $white-color;
+    color:$white-color;
+
+    &:hover {
+        background-color:$white-color;
+        color:$dark-green;
+    }
+}
+
+
+.dark-btn {
+    border-color: $sacramento-state-green;
+    color:$sacramento-state-green;
+
+    &:hover {
+        background-color:$sacramento-state-green;
+        color:$white-color;
+    }
+}
+
+
+
+.section__link__btn {
+    border-radius: 2.4rem;
+    border: 2px solid;
+    line-height: 1.56;
+    padding-top: 0.9rem;
+    padding-right: 3.3rem;
+    padding-bottom: 1.1rem;
+    padding-left: 3.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.section-btn {
+    border-color: $sacramento-state-green;
+    color: $sacramento-state-green;
+}
+
+@media screen and (max-width:375px) {
+    .section__link__btn {
+        margin-left: 6rem;
+    }
+}
